@@ -1,0 +1,12 @@
+# Locked 2026-10-14 before the C1 holdout (2013-10-01..2014-02-27) was opened.
+# Rule: lowest validation primary (mean of size-100 median, size-1000 median, all-households WAPE);
+# simpler model if the gain has a CI including 0.
+final_candidate: C1_chronos2_zero        # validation primary 6.22%, all 4.78%
+selection_evidence:
+  C1_vs_T1_all: "-1.14 pp, CI [-1.75, -0.61]"
+  C1_vs_T1_n100: "-0.68 pp, CI [-1.04, -0.38]"
+  C2_lora_vs_C1_all: "+0.19 pp, CI [-0.17, +0.65] -> fine-tune not chosen"
+  E1_avg_vs_C1_all: "+0.06 pp, CI [-0.16, +0.32] -> combo not chosen"
+  T5_vs_T1_all: "-0.20 pp, CI [-0.41, +0.02] -> T1 kept as the LightGBM reference"
+holdout_set: [N1_naive_d7, N2_mean_4weeks, T1_lgbm_topdown, C1_chronos2_zero, TX2_oracle_delta_nodoy]
+reference_only: [TX2_oracle_delta_nodoy]   # actual day-D temperature = oracle, not a forecast

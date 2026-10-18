@@ -1,0 +1,10 @@
+{
+ "files": 168,
+ "rows": 167932474,
+ "kwh_unparsed": 5560,
+ "tariff_rows": 17520,
+ "tariff_cols": [
+  "TariffDateTime",
+  "Tariff"
+ ]
+}
